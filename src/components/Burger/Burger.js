@@ -5,7 +5,7 @@ import BurgerIngredient from './BurgerIngredient/BurgerIngredient';
 
 const burger = (props) => {
     
-    const transformedIngredients = Object.keys(props.ingredients) //this return an array of the ingredients but not with the number
+    let transformedIngredients = Object.keys(props.ingredients) //this return an array of the ingredients but not with the number
         
     
        .map(igKey => {
@@ -15,7 +15,15 @@ const burger = (props) => {
                 return  <BurgerIngredient key={igKey + i} type={igKey} />
               });
         
-        });
+        })
+        
+        .reduce((arr, el) => {
+            return arr.concat(el)
+        },[]);
+
+        if (transformedIngredients.length === 0) {
+            transformedIngredients = <p>Please start adding ingredients!</p>
+        }
             
 
        console.log(transformedIngredients);
