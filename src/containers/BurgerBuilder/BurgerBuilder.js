@@ -9,7 +9,7 @@ class BurgerBuilder extends Component {
         constructor(props) {
             super(props);
             this.state = {...}
-        }
+        } 
     }
     */
 
@@ -25,7 +25,7 @@ class BurgerBuilder extends Component {
     render() { //the most important one - we always need to render something, makes sense as we manage state, the reason we are using class based components and not functional component or dumb
         return (
             <Aux>
-                <Burger ingredients={this.state.ingredients} />
+                <Burger ingredients={this.state.ingredients} /> 
                 <div>Build Controls</div>
             </Aux>
             
@@ -34,3 +34,6 @@ class BurgerBuilder extends Component {
 }
 
 export default BurgerBuilder;
+
+
+//Burger component : I want to return a graphical representation of the burger with all the ingredients

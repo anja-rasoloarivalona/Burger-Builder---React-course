@@ -5,7 +5,7 @@ import React from 'react';
 import Aux from '../../hoc/Auxiliary';
 import classes from './Layout.css';
 
-const layout = (props) => (
+const layout = (props) => ( //this is a function 
     <Aux>
         <div>Toolbar, SideDrawer, Backdrop</div>
         <main className={classes.Content}>
